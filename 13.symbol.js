@@ -64,11 +64,6 @@ console.log('String[toString]("goodman"): ', String[toString]("goodman"));
 // 인터페이스
 // well known symbols
 // Symbol.iterator // iteration을 위한 symbol
-// Symbol.match
-// Symbol.split
-// Symbol.replace
-
-
-
-
-// generat
+// Symbol.match // 이런게 있다.
+// Symbol.split // 이런게 있다.
+// Symbol.replace // 이런게 있다.
