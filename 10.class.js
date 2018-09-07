@@ -39,11 +39,35 @@ gwen.sayHi();
 
 // inheritance
 class Spiderman extends _Person {
+  constructor(name, age, tools) {
+    super(name, age);
+    this.tools = tools;
+  }
+
+  static getSpiderman() {
+    return new Spiderman('venom', 23, 'black-web');
+  }
+
   web() {
     console.log('Server is listening on port 9000...');
   }
+  get nameAndAge() {
+    return this.name + ' ' + this.age;
+  }
+
+  set nameAndAge(obj) {
+    this.name = obj.name;
+    this.age = obj.age
+  }
 }
 
-const spiderman = new Spiderman('스파이더맨', 23);
+const spiderman = new Spiderman('스파이더맨', 23, 'web');
 spiderman.sayHi();
 spiderman.web();
+
+const venom = Spiderman.getSpiderman();
+venom.sayHi();
+venom.web();
+console.log('venom.nameAndAge: ', venom.nameAndAge);
+venom.nameAndAge = { name: '에디브룩', age: 22 };
+console.log('venom.nameAndAge: ', venom.nameAndAge);
